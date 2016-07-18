@@ -1,0 +1,9 @@
+#!/bin/bash
+
+## Declare Variables
+queue='bigmem.q'					## The queue of QSE you want to monitor
+log='patate'		## Full name of the log file
+
+
+## top in batch only for 1 iteration (-b -n 1)
+qsub -b Y -N top -V -q $queue top -b -n 1 -u $USER | awk '$9 > 100 {print $0}' >> $log
