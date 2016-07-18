@@ -2,7 +2,7 @@
 
 ## Declare Variables
 queue='bigmem.q'					## The queue of QSE you want to monitor
-log='patate'		## Full name of the log file
+log='/homedir/$USER/patate.log'		## Full name of the log file
 
 
 ## top in batch only for 1 iteration (-b -n 1)
