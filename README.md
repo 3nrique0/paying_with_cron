@@ -1,5 +1,6 @@
-I sometimes need to surveil some tasks on a QSE by distance or monitor my resource consumption in a common server.
+I sometimes need to monitor the resource consumption some tasks on a QSE.
 Therefore I needed to create some automated way of doing it.
+
 
 The path and username will be deliverately named $USER and $path
 For the noobs, the variables in UPPER-CASE belong to the system, wheres lower-case are given by the user.
@@ -8,3 +9,5 @@ For the noobs, the variables in UPPER-CASE belong to the system, wheres lower-ca
 
  Enjoy !!
  3nrique0
+
+
