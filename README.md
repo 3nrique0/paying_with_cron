@@ -32,23 +32,23 @@ So the order of scripts calling scripts goes as following:
 
 ### Manual ###
 Once you launched a long process on a QSE, with the right options!!, you should prepare :
-1. my_script.sh with the top command you want to use. I'd advise to use the name of the process to grep the line you want.
+
+1. `my_script.sh` with the top command you want to use. I'd advise to use the name of the process to grep the line you want.
 
 2. `chmod +x my_script.sh`
 
-3. Check the script qse_launcher.sh by using the command: `qsub qse_launcher.sh`
+3. Check the script `qse_launcher.sh` by using the command: `qsub qse_launcher.sh`
 
-4. Check the crontable you need, some examples are in crontable_examples : 
-	online help:
-	http://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
-	http://stackoverflow.com/questions/5398014/using-crontab-to-execute-script-every-minute-and-another-every-24-hours
+4. Check `examples_crontable` and create your crontable 
 	
 5. Launch cron:
 Add the crontable with the command 'crontable -e' (no quotes!)
 Write the table you require. e.g. every 15 min:
 /15 * * * * /homedir/$USER/path/.monitor_clusterjob.sh
 
-
+6. When the process is finished, don't forget to remove the crontable,
+in case you have many tables running, editing it out with `crontable -e`
+or in case you only have one running with `crotable -r`
 
 ### Description of files ###
 
@@ -58,6 +58,21 @@ Files:
 
 **qse_launcher.sh** : Script containing the options for QSE. Please take note of the -o  amd -e options allowing to manage output and error files to a specific file. This files are in append mode. So you'll need to empty them manually when finished.
 
-**example_top** : Propositions of top commands to filter the top results to only have the results you want to have. The easiest way would be to filter by name.
+**examples_top** : Propositions of top commands to filter the top results to only have the results you want to have. The easiest way would be to filter by name.
+
+**examples_crontable** : Some exmaples to make your own crontables.
+
+
+#### Helpful Links ####
+
+##### Cron #####
+
+* http://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+* http://stackoverflow.com/questions/5398014/using-crontab-to-execute-script-every-minute-and-another-every-24-hours
+
+##### QSE, qsub #####
+
+* https://www.uibk.ac.at/zid/systeme/hpc-systeme/common/tutorials/sge-howto.html
+* http://www.southgreen.fr/content/cirad-cluster
 
 
