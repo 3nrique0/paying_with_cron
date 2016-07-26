@@ -4,7 +4,13 @@
 # Be sure to use 
 
 
-## top in batch only for 1 iteration (-b -n 1)
-top -b -n 1 -u $USER | awk '$9 > 100 {print $0}'
+## top in batch only for 1 iteration (-b -n 1) | Filter on %CPU
+top -b -n 1 -u $USER | awk '$9 > 90 {print $0}'
 
+## top in batch only for 1 iteration (-b -n 1) | Filter on %CPU and %MEM 
 top -b -n 1 -u $USER | awk '$9 > 100 && $10 > 0.3 {print $0}' 
+
+## top in batch only for 1 iteration (-b -n 1) | Filter on process name
+top -b -n 1 -u $USER | grep processname
+
+

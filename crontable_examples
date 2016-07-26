@@ -1,0 +1,7 @@
+## every minute:
+* * * * * command
+## every 15 min:
+/15 * * * * command
+## every 2 hours
+0 /2 * * * command
+
