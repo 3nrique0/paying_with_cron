@@ -41,14 +41,14 @@ Once you launched a long process on a QSE, with the right options!!, you should 
 
 4. Check `examples_crontable` and create your crontable 
 	
-5. Launch cron:
-Add the crontable with the command 'crontable -e' (no quotes!)
-Write the table you require. e.g. every 15 min:
-/15 * * * * /homedir/$USER/path/.monitor_clusterjob.sh
+5. Launch cron. Add the crontable with the command `crontable -e`
+Write the table you created in the previous step.
+E.g.: launch every 15 minutes
+`/15 * * * * /home/$USER/path/.monitor_clusterjob.sh`
 
 6. When the process is finished, don't forget to remove the crontable,
 in case you have many tables running, editing it out with `crontable -e`
-or in case you only have one running with `crotable -r`
+or in case you only have one running with `crotable -r`.
 
 ### Description of files ###
 
