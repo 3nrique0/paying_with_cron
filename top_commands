@@ -1,10 +1,10 @@
 #!/bin/bash
 
-## Declare Variables
-queue='bigmem.q'					## The queue of QSE you want to monitor
-log='/homedir/$USER/patate.log'		## Full name of the log file
+## In the QSE the output will be sent imediatly in the .o<procID> file
+# Be sure to use 
 
 
 ## top in batch only for 1 iteration (-b -n 1)
-qsub -b Y -N top -V -q $queue top -b -n 1 -u $USER | awk '$9 > 100 {print $0}' >> $log
-##qsub -b Y -N top -V -q $queue top -b -n 1 -u $USER | awk '$9 > 100 && $10 > 0.3 {print $0}' >> $log
+top -b -n 1 -u $USER | awk '$9 > 100 {print $0}'
+
+top -b -n 1 -u $USER | awk '$9 > 100 && $10 > 0.3 {print $0}' 
