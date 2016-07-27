@@ -1,15 +1,14 @@
 #!/bin/bash
 
-#$ -q queue.q
-#$ -o /home/$USER/output.log
-#$ -e /home/$USER/error.log
-#$ -M user1@domain.com,user@domain.org
+#$ -q bigmem.q
+#$ -o /homedir/ortegaabboud/git_3nrique0/playing_with_cron/output.log
+#$ -e /homedir/ortegaabboud/git_3nrique0/playing_with_cron/error.log
+#$ -M ortegaabboud@protonmail.ch
 #$ -m es
-# -b Y		## when not using scripts using binary is necessary.
-		## it is not when using an executable script as in this case 
 #$ -N top
 #$ -V
+#$ -b Y
+# –l mem_free=10M
 
-
-./my_script.sh
+/homedir/ortegaabboud/git_3nrique0/playing_with_cron/./my_script.sh
 
