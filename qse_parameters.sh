@@ -1,8 +1,10 @@
 #!/bin/bash
 
-#$ -q bigmem.q
-#$ -o /homedir/ortegaabboud/git_3nrique0/playing_with_cron/output.log
-#$ -e /homedir/ortegaabboud/git_3nrique0/playing_with_cron/error.log
+#$ -q normal.q@cc2-n13
+# -o /homedir/ortegaabboud/git_3nrique0/playing_with_cron/output.log
+#$ -o /homedir/ortegaabboud/consensus260output.log
+#$ -e /homedir/ortegaabboud/consesus260error.log
+# -e /homedir/ortegaabboud/git_3nrique0/playing_with_cron/error.log
 # -M ortegaabboud@protonmail.ch
 # -m es
 #$ -N top
